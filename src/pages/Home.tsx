@@ -1,6 +1,6 @@
 // Create the Blog component to mention the Blog information
 
-const Blog = () => {
+const Home = () => {
   return (
     <div>
       <h1>Blog</h1>
@@ -11,4 +11,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Home;
