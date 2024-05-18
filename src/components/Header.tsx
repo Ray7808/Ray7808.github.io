@@ -39,7 +39,7 @@ function Header() {
             <Link to="/projects" className="block py-2">
               Projects
             </Link>
-            <Link to="/about" className="block py-2">
+            <Link to="/about" className="block py-2 outline-test">
               About
             </Link>
             <Link to="/contact" className="block py-2">

@@ -7,6 +7,6 @@
     @apply bg-white dark:bg-slate-800 text-black dark:text-white;
   }
   .outline-test {
-    outline: "3px solid tomato";
+    outline: 3px solid tomato;
   }
 }
