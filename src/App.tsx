@@ -1,14 +1,22 @@
+// //Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// Pages
+// //Pages
 import Blog from "./pages/Blog";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-// Components
+// //Components
 import Header from "./components/Header";
+// //Tailwind CSS
+import "./index.css";
+// //test
+// import Test from "./test/Test";
 
 function App() {
   return (
+    // <>
+    //   <Test />
+    // </>
     <BrowserRouter>
       <Header />
       <Routes>

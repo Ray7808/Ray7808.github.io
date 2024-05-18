@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-800 text-black dark:text-white;
+  }
+  .outline-test {
+    outline: "3px solid tomato";
+  }
+}
