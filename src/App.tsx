@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 // //Components
 import Header from "./components/Header";
 // //Tailwind CSS
-import "./index.css";
+import "./style.css";
 // //test
 // import Test from "./test/Test";
 
