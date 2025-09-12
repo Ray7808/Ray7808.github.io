@@ -7,28 +7,59 @@ import {
   HStack,
   Spacer,
 } from "@chakra-ui/react";
-
 import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
 
 function NavLinks() {
   const { toggleColorMode } = useColorMode();
+  // 依色彩模式調整 hover 背景與發光陰影
+  const hoverBg = useColorModeValue("gray.100", "whiteAlpha.200");
+  const hoverShadow = useColorModeValue(
+    "0 0 0 3px var(--chakra-colors-blue-300)",
+    "0 0 0 3px var(--chakra-colors-blue-500)"
+  );
 
   return (
     <HStack gap={6}>
-      <CLink href="" _hover={{ textDecoration: "none" }}>
+      <CLink
+        href="/"
+        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        _active={{ transform: "translateY(1px)" }}
+        _focusVisible={{ boxShadow: hoverShadow }}
+      >
         Home
       </CLink>
-      <CLink href="about" _hover={{ textDecoration: "none" }}>
+      <CLink
+        href="about"
+        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        _active={{ transform: "translateY(1px)" }}
+        _focusVisible={{ boxShadow: hoverShadow }}
+      >
         About
       </CLink>
-      <CLink href="projects" _hover={{ textDecoration: "none" }}>
+      <CLink
+        href="projects"
+        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        _active={{ transform: "translateY(1px)" }}
+        _focusVisible={{ boxShadow: hoverShadow }}
+      >
         Project
       </CLink>
-      <CLink href="blogs" _hover={{ textDecoration: "none" }}>
+      <CLink
+        href="blogs"
+        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        _active={{ transform: "translateY(1px)" }}
+        _focusVisible={{ boxShadow: hoverShadow }}
+      >
         Blog
       </CLink>
 
-      <Button variant="outline" onClick={toggleColorMode}>
+      <Button
+        variant="outline"
+        onClick={toggleColorMode}
+        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        _active={{ transform: "translateY(1px)" }}
+        _focusVisible={{ boxShadow: hoverShadow }}
+      >
         Toggle Mode
       </Button>
     </HStack>
