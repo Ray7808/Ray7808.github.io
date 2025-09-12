@@ -21,10 +21,10 @@ function NavLinks() {
       <CLink href="about" _hover={{ textDecoration: "none" }}>
         About
       </CLink>
-      <CLink href="project" _hover={{ textDecoration: "none" }}>
+      <CLink href="projects" _hover={{ textDecoration: "none" }}>
         Project
       </CLink>
-      <CLink href="blog" _hover={{ textDecoration: "none" }}>
+      <CLink href="blogs" _hover={{ textDecoration: "none" }}>
         Blog
       </CLink>
 
@@ -51,8 +51,8 @@ export default function Navbar() {
     >
       <Container maxW="6xl" py={3}>
         <Flex align="center" gap={6}>
-          <CLink href="#home" fontWeight="semibold" letterSpacing="wide">
-            Ray
+          <CLink href="/" fontWeight="semibold" letterSpacing="wide">
+            HC
           </CLink>
           <Spacer />
           <NavLinks />

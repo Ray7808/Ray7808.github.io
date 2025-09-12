@@ -1,10 +1,10 @@
 import Navbar from "./features/Navbar";
 
-export default function About() {
+export default function Blogs() {
   return (
     <>
       <Navbar />
-      <h1>About</h1>
+      <h1>Blogs</h1>
     </>
   );
 }

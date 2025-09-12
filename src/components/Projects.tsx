@@ -1,10 +1,10 @@
 import Navbar from "./features/Navbar";
 
-export default function About() {
+export default function Projects() {
   return (
     <>
       <Navbar />
-      <h1>About</h1>
+      <h1>Projects</h1>
     </>
   );
 }
