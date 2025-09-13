@@ -2,7 +2,7 @@ import {
   Box,
   Container,
   Flex,
-  Link as CLink,
+  Link,
   Button,
   HStack,
   Spacer,
@@ -17,42 +17,25 @@ function NavLinks() {
     "0 0 0 3px var(--chakra-colors-blue-300)",
     "0 0 0 3px var(--chakra-colors-blue-500)"
   );
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Project" },
+    { href: "/blogs", label: "Blog" },
+  ];
 
   return (
     <HStack gap={6}>
-      <CLink
-        href="/"
-        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
-        _active={{ transform: "translateY(1px)" }}
-        _focusVisible={{ boxShadow: hoverShadow }}
-      >
-        Home
-      </CLink>
-      <CLink
-        href="about"
-        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
-        _active={{ transform: "translateY(1px)" }}
-        _focusVisible={{ boxShadow: hoverShadow }}
-      >
-        About
-      </CLink>
-      <CLink
-        href="projects"
-        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
-        _active={{ transform: "translateY(1px)" }}
-        _focusVisible={{ boxShadow: hoverShadow }}
-      >
-        Project
-      </CLink>
-      <CLink
-        href="blogs"
-        _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
-        _active={{ transform: "translateY(1px)" }}
-        _focusVisible={{ boxShadow: hoverShadow }}
-      >
-        Blog
-      </CLink>
-
+      {links.map((l) => (
+        <Link
+          href={l.href}
+          _active={{ transform: "translateY(1px)" }}
+          _focusVisible={{ boxShadow: hoverShadow }}
+          _hover={{ bg: hoverBg, boxShadow: hoverShadow }}
+        >
+          {l.label}
+        </Link>
+      ))}
       <Button
         variant="outline"
         onClick={toggleColorMode}
@@ -82,9 +65,9 @@ export default function Navbar() {
     >
       <Container maxW="6xl" py={3}>
         <Flex align="center" gap={6}>
-          <CLink href="/" fontWeight="semibold" letterSpacing="wide">
+          <Link href="/" fontWeight="semibold" letterSpacing="wide">
             HC
-          </CLink>
+          </Link>
           <Spacer />
           <NavLinks />
         </Flex>
