@@ -8,7 +8,6 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
-import { TiAdjustBrightness } from "react-icons/ti";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 function NavLinks() {
