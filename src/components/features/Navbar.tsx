@@ -8,6 +8,8 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
+import { TiAdjustBrightness } from "react-icons/ti";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 function NavLinks() {
   const { toggleColorMode } = useColorMode();
@@ -17,6 +19,8 @@ function NavLinks() {
     "0 0 0 3px var(--chakra-colors-blue-300)",
     "0 0 0 3px var(--chakra-colors-blue-500)"
   );
+  const icon = useColorModeValue(<FiSun />, <FiMoon />);
+
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -43,7 +47,7 @@ function NavLinks() {
         _active={{ transform: "translateY(1px)" }}
         _focusVisible={{ boxShadow: hoverShadow }}
       >
-        Toggle Mode
+        {icon}
       </Button>
     </HStack>
   );
